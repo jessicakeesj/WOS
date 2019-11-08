@@ -30,6 +30,7 @@ func _ready():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Assignments/AssignmentMenu.tscn")
+	pass # Replace with function body.
 	# Link to Serene's
 
 func _on_ReportButton_pressed():
@@ -66,9 +67,9 @@ func getTeachersName(jsonResult):
 			var teacherDomain = "teacher"
 			var check = infoArr.fields['Domain'].values()[0]
 			check = check.to_lower()
-			#if("zDt83Qf1iNO1liFifv7EFSAD4fg1" == infoArr.fields['UID'].values()[0]):
+			if("zDt83Qf1iNO1liFifv7EFSAD4fg1" == infoArr.fields['UID'].values()[0]):
 				#Uncomment after complete testing
-			if(teachersName.get_user_id() == infoArr.fields['UID'].values()[0]):
+			#if(teachersName.get_user_id() == infoArr.fields['UID'].values()[0]):
 				if(teacherDomain == check):
 					get_tree().get_root().get_node("Node/Label").text = str(infoArr.fields['Name'].values()[0])
 					# get classes under the teacher

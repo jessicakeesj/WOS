@@ -38,7 +38,7 @@ func _ready():
 	var complete2 = ""
 
 	for i in range(0,globals.weakestArr.size()):
-    complete2 += globals.weakestArr[i]
+    complete += globals.weakestArr[i]
 	
 	classSumm.get_node("ClassWeakSection").text = complete
 	classSumm.get_node("ClassStrongSection").text = complete2
@@ -217,9 +217,6 @@ func addStudentSumm(names, strong, weak):
 	for i in range(0,globals.weakestArr.size()):
 		if (globals.weakestArr[i] == studentSummID.get_node("WeakSectionName").text):
 			exist2+=1
-		for a in range(0,globals.strongestArr.size()):
-			if(globals.strongestArr[a] == studentSummID.get_node("WeakSectionName").text):
-					exist2+=1
 	if(exist2 == 0):
 		globals.weakestArr.append(str(studentSummID.get_node("WeakSectionName").text))
 		get_tree().reload_current_scene()
