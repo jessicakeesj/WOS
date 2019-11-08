@@ -5,15 +5,19 @@ onready var http =get_node("HTTPRequest")
 var Firebase=load("res://firebase/Firebase.gd").new()
 var world_data =[]
 
+# How many times test loops are ran. Higher is slower, but gives better average.
+const ITERATIONS = 1
+
 func _ready():
 	 #display_world()
-	Firebase.get_document_or_collection("Users", http)
+	Global.start_test("Worlds (WorldsScreen.tscn)")
+	for i in range(0,ITERATIONS):
+		Firebase.get_document_or_collection("Users", http)
+	pass
 
 func redirect_level(index):
 	Global.set_current_world(index)
 	get_tree().change_scene("res://Scenes//Worlds//LevelSelection.tscn")
-
-	
 
 #Display tutorial dialogue 
 func display_world_tutorial():
@@ -42,6 +46,7 @@ func fetch_user_history(request_result):
 			print(path)
 		index+=1
 	get_node("LoadingScreen").hide()
+	Global.stop_test(ITERATIONS)
 
 
 func fetch_db(name):

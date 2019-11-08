@@ -48,10 +48,12 @@ var Firebase=load("res://firebase/Firebase.gd").new()
 var dialog
 var dialog_bg
 var font_path = "res://Fonts//"
-
+# How many times test loops are ran. Higher is slower, but gives better average.
+const ITERATIONS = 1
 const ListItem=preload("res://Scenes/Quiz/GridRow.tscn") #edit from here
 
 func _ready():
+	Global.start_test("challenge question list (ChallangeListScene.tscn)")
 	init()
 	get_questions()
 
@@ -106,7 +108,7 @@ func addItem(questions):
 		v_container.add_child(rowScene)
 		checkBoxNode = rowScene.get_node("CheckBox")
 		checkBoxNode.text = qn.question
-		
+	Global.stop_test(ITERATIONS)
 
 func _on_challengeButton_pressed():
 	get_tree().change_scene("res://Scenes/Quiz/ChallengerList.tscn")

@@ -6,7 +6,7 @@ var challenges=[]
 var current_world = 1
 var current_section = "5eZBbr744PdaQ7CcTXNj"
 var current_level = 1
-#var user_key = "MxJuDhyfUiGfuBpSPki2"
+#var user_key = "y4vhvl5smZYWk60HmIes"
 var user_key 
 
 var selected_character = "Dog"
@@ -26,6 +26,44 @@ var weakestArr = Array()
 
 var world_tut = "tutorial.json"
 var level_tut = "tutorialselectlevel.json"
+
+# Per case:
+# True: print time for 1 loop
+# False: print time for all loops
+const PRINT_PER_TEST_TIME = true
+
+var _time_before = 0
+var _for_time = 0
+var _test_name = ""
+var _test_results = []
+
+func start_test(name):
+	print("Performance test for " + str(name))
+	print("Performance test begins...")
+	_time_before = OS.get_ticks_msec()
+
+func stop_test(iter):
+	var time = OS.get_ticks_msec() - _time_before
+	if _test_name.length() != 0:
+		var test_time = time - _for_time
+		
+		if PRINT_PER_TEST_TIME:
+			# Time taken for 1 test
+			var k = 1000000.0 / iter
+			test_time = k * test_time
+		
+		print(_test_name + ": " + str(test_time))# + " (with for: " + str(time) + ")")
+		_test_results.append({
+			name = _test_name,
+			time = test_time
+		})
+	_for_time = time
+	print("For time: " + str(_for_time))
+	print("")
+	if PRINT_PER_TEST_TIME:
+		print("The following times are in microseconds taken for 1 test.")
+	else:
+	 	print("The following times are in seconds for the whole test.")
 
 func get_selected_character():
 	return selected_character

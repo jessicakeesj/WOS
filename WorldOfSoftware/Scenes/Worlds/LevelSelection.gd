@@ -6,6 +6,9 @@ var level_array =[]
 
 var section_index =0
 
+# How many times test loops are ran. Higher is slower, but gives better average.
+const ITERATIONS = 1
+
 onready var http =get_node("HTTPRequest")
 onready var level_selection = get_node("LevelSelection")
 onready var npc_dialogue = get_node("Dialogue")
@@ -13,8 +16,10 @@ onready var npc_dialogue = get_node("Dialogue")
 var Firebase=load("res://firebase/Firebase.gd").new()
 
 func _ready():
-	Firebase.get_document_or_collection("Worlds", http)
-	get_node("LevelSelection").disable_left_btn()
+	Global.start_test("Level Selection (LevelSelection.tscn)")
+	for i in range(0,ITERATIONS):
+		Firebase.get_document_or_collection("Worlds", http)
+		get_node("LevelSelection").disable_left_btn()
 	pass # Replace with function body.
 
 
@@ -112,6 +117,7 @@ func fetch_user_history(request_result):
 	level_selection.enable_level(1)
 	level_selection.enable_level_icon(1)
 	get_node("LoadingScreen").set_visible(false)
+	Global.stop_test(ITERATIONS)
 
 func fetch_db(name):
 	http =get_node("HTTPRequest")

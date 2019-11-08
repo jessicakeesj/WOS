@@ -15,7 +15,7 @@ func _ready():
 func enable_level(index):
 	var col_path 
 	col_path = path + String(index) + "/CollisionShape2D"
-	print(col_path)
+#	print(col_path)
 	get_node(col_path).set_disabled(false)
 func enable_level_icon(index):
 	var icon_path = "Levels//Level" + String(index) + "//Level" + String(index)

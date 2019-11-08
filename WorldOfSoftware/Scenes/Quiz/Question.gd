@@ -77,11 +77,12 @@ var challenge_hist
 var selection_arr = []
 var history_arr = []
 var question_keys = []
-
+var end = false
 var current_question_key = "hHgqShTzku8hhR7X9XPf"
 var current_answer
 
-var end = false
+# How many times test loops are ran. Higher is slower, but gives better average.
+const ITERATIONS = 1
 
 signal response
 signal ok
@@ -89,11 +90,16 @@ signal ok
 var sprite_node
 
 func _ready():
-	current_user = Global.user_key
-	loadCharacter()
-	initiate()
-	popup_dialog("Loading..", "", false)
-	fetch_from_db("Users/" + str(current_user)) # get history
+	Global.start_test("Quiz (QuestionScene.tscn)")
+	for i in range(0,ITERATIONS):
+		current_user = Global.user_key
+		loadCharacter()
+		initiate()
+		popup_dialog("Loading..", "", false)
+		fetch_from_db("Users/" + str(current_user)) # get history
+	pass
+
+
 
 func loadCharacter():
 	var selected_char = Global.get_selected_character()
@@ -218,6 +224,9 @@ func start_quiz():
 	sprite_node.play("run")
 	yield(get_tree().create_timer(0.5), "timeout")
 	close_dialog()
+	
+	Global.stop_test(ITERATIONS)
+
 	for qns in questions:
 		setup_question(questions[qns])
 		yield(self,"response")

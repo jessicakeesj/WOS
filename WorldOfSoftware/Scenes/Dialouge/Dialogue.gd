@@ -35,8 +35,8 @@ func display_npc():
 	var file_path = Global.get_selected_character().to_lower() +"_head (1).png" 
 	var total_path = sprite_head + file_path
 	var sprite = load(total_path)
-	print(total_path)
-	print(sprite)
+#	print(total_path)
+#	print(sprite)
 	npc_dialogue.set_visible_characters(0)
 	npc_dialogue.set_bbcode(dialogue)
 	npc_name.set_bbcode(Global.get_selected_character())
