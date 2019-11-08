@@ -1,5 +1,7 @@
+# Aung 
+# Last Edited 8/11
 extends Node
-# My Firebass API Key
+# Aung Firebass API Key
 const API_KEY := "AIzaSyBvsNBz_HEsQDZVE1hLEhYeJ8ZeXpqnMuE"
 
 const SEND_URL:="https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=%s" % API_KEY

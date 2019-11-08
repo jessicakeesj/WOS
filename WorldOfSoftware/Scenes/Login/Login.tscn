@@ -78,9 +78,9 @@ text = "Login Page"
 align = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 202.769
+margin_left = 167.769
 margin_top = 439.612
-margin_right = 593.769
+margin_right = 558.769
 margin_bottom = 614.612
 
 [node name="Username" type="HBoxContainer" parent="VBoxContainer"]
@@ -97,9 +97,9 @@ align = 1
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/Username"]
 margin_left = 125.0
-margin_right = 225.0
+margin_right = 325.0
 margin_bottom = 34.0
-rect_min_size = Vector2( 100, 0 )
+rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = SubResource( 3 )
 
 [node name="Password" type="HBoxContainer" parent="VBoxContainer"]
@@ -116,9 +116,9 @@ text = "Password:"
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/Password"]
 margin_left = 125.0
-margin_right = 225.0
+margin_right = 325.0
 margin_bottom = 34.0
-rect_min_size = Vector2( 100, 0 )
+rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = SubResource( 5 )
 secret = true
 
@@ -136,9 +136,9 @@ text = "Domain:"
 
 [node name="LineEdit" type="OptionButton" parent="VBoxContainer/Domain"]
 margin_left = 125.0
-margin_right = 242.0
+margin_right = 325.0
 margin_bottom = 34.0
-rect_min_size = Vector2( 100, 0 )
+rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = SubResource( 7 )
 text = "STUDENT"
 items = [ "STUDENT", null, false, 0, null, "TEACHER", null, false, 1, null ]

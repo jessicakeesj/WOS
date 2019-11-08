@@ -70,7 +70,7 @@ text = "Login"
 [node name="ButtonLayer" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="LoginButton" type="TextureButton" parent="ButtonLayer"]
+[node name="RegisterButton" type="TextureButton" parent="ButtonLayer"]
 margin_left = 142.0
 margin_top = 506.212
 margin_right = 492.0
@@ -80,7 +80,7 @@ size_flags_vertical = 3
 texture_normal = SubResource( 4 )
 expand = true
 
-[node name="RegisterButton" type="TextureButton" parent="ButtonLayer"]
+[node name="LoginButton" type="TextureButton" parent="ButtonLayer"]
 margin_left = 142.0
 margin_top = 697.159
 margin_right = 492.0
@@ -98,5 +98,5 @@ show_behind_parent = true
 position = Vector2( 956.156, 697.452 )
 scale = Vector2( 1, 1.29187 )
 texture = ExtResource( 3 )
-[connection signal="pressed" from="ButtonLayer/LoginButton" to="." method="_on_RegisterButton_pressed"]
-[connection signal="pressed" from="ButtonLayer/RegisterButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="pressed" from="ButtonLayer/RegisterButton" to="." method="_on_RegisterButton_pressed"]
+[connection signal="pressed" from="ButtonLayer/LoginButton" to="." method="_on_LoginButton_pressed"]
