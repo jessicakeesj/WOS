@@ -1,9 +1,12 @@
+# Aung 
+# Last Edited 8/11
 extends Control
 const ClassName = preload("res://static/Firebase.gd")
 var Firebase = ClassName.new()
 
 # Yongxin's firebase file
 var Firebase2 = load("res://firebase/Firebase.gd").new()
+# Aung Email sending Firebase file 
 var verifyBase = load("res://Scenes/Login/Confimation.gd").new()
 
 onready var http : HTTPRequest = $HTTPRequest
@@ -68,7 +71,7 @@ func _on_HTTPRequest2_request_completed(result: int, response_code: int, headers
 	#Firebase2.save_document("Users", infos, http3)
 	Firebase.save_document("Users?documentId=%s" % Firebase.user_info.id, infos, http3)
 	
-	
+# Buffer HTTPRequests
 func _on_HTTPRequest3_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
 	print("added to database")
 	
