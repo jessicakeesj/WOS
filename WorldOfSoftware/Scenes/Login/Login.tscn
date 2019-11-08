@@ -154,14 +154,6 @@ selected = 0
 
 [node name="HTTPRequest5" type="HTTPRequest" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = -4.0
-margin_top = 498.0
-margin_right = 623.0
-margin_bottom = 556.0
-custom_constants/separation = 20
-alignment = 1
-
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
 show_behind_parent = true
