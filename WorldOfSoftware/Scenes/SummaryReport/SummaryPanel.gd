@@ -24,7 +24,7 @@ var sectionName = ''
 
 func _ready():
 	#Remember to delete this and check dependecies
-	#Uncomment when testing
+	#Uncomment to test on its own
 	#globals.summ_class = "SSP4"
 	get_tree().get_root().get_node("Node/ClassNameLabel").text = str(globals.summ_class)
 	var classSumm = ClassSummaryListItem.instance()
