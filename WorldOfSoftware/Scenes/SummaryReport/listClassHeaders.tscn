@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+font_data = ExtResource( 1 )
+
+[node name="Panel" type="Panel"]
+margin_left = 42.0
+margin_top = 90.0
+margin_right = 1215.0
+margin_bottom = 165.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="IndexHeader" type="Label" parent="."]
+margin_left = 15.737
+margin_top = 6.842
+margin_right = 174.737
+margin_bottom = 65.842
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Index"
+align = 1
+valign = 1
+
+[node name="NameHeader" type="Label" parent="."]
+margin_left = 197.916
+margin_top = 13.311
+margin_right = 414.916
+margin_bottom = 60.311
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "StudentName"
+align = 1
+valign = 1
+
+[node name="EmailHeader" type="Label" parent="."]
+margin_left = 463.211
+margin_top = 12.632
+margin_right = 672.211
+margin_bottom = 59.632
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "EmailHeader"
+align = 1
+valign = 1
+
+[node name="MasteryHeader" type="Label" parent="."]
+margin_left = 708.0
+margin_top = 14.0
+margin_right = 915.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MasteryLvl"
+align = 1
+valign = 1
+
+[node name="ExampleHeader" type="Label" parent="."]
+margin_left = 972.526
+margin_top = 11.579
+margin_right = 1100.53
+margin_bottom = 58.579
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Example"
+align = 1
+valign = 1

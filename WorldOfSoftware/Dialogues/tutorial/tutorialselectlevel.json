@@ -1,0 +1,27 @@
+{ 
+   "1":{ 
+      "id":1,
+      "name":"Cat",
+      "dialogue":"Now we select level",
+	  "sprite":"Idle (1)",
+   },
+   "2":{ 
+      "id":2,
+      "name":"Dog",
+      "dialogue":"Go on select level 1",
+	  "sprite":"Run (1)",
+   },
+   "3":{ 
+      "id":3,
+      "name":"Cat",
+       "dialogue":"Select level 1",
+	   "sprite":"Idle (1)",
+   },
+   "4":{ 
+      "id":4,
+      "name":"Dog",
+       "dialogue":"Click it now",
+	   "sprite":"Idle (1)",
+   },
+   
+}

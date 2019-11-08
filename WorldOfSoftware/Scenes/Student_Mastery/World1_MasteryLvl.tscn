@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Student_Mastery/World1_MasteryLvl.gd" type="Script" id=1]
+[ext_resource path="res://Background/background.png" type="Texture" id=2]
+[ext_resource path="res://Images/bg1.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Worlds/left.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 180
+font_data = ExtResource( 4 )
+
+[node name="World1_MasteryLvl" type="Node"]
+script = ExtResource( 1 )
+
+[node name="BackgroundImg" type="Sprite" parent="."]
+position = Vector2( 313.037, 544.108 )
+scale = Vector2( 0.324907, 1.00176 )
+texture = ExtResource( 2 )
+
+[node name="Board" type="Sprite" parent="BackgroundImg"]
+position = Vector2( 23.2868, -19.2828 )
+scale = Vector2( 1.66204, 0.682021 )
+texture = ExtResource( 3 )
+
+[node name="World1" type="Label" parent="BackgroundImg/Board"]
+margin_left = -183.746
+margin_top = -605.167
+margin_right = 260.254
+margin_bottom = -492.167
+custom_fonts/font = SubResource( 1 )
+text = "World 1"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundImg/Board"]
+margin_left = -362.58
+margin_top = -473.461
+margin_right = 389.42
+margin_bottom = 497.539
+
+[node name="List" type="VBoxContainer" parent="BackgroundImg/Board/ScrollContainer"]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 83.4861
+margin_top = 110.496
+margin_right = 2169.49
+margin_bottom = 817.496
+rect_scale = Vector2( 0.0988293, 0.0988293 )
+icon = ExtResource( 5 )
+flat = true
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

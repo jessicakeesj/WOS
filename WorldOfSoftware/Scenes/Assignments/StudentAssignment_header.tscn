@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Assignments/StudentAssignment_header.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Fonts/Candy Beans.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = SubResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 600.0
+margin_bottom = 324.0
+custom_constants/separation = 20
+
+[node name="question" type="Label" parent="VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
+text = "place"
+align = 1
+autowrap = true
+
+[node name="op1" type="Label" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 600.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 3 )
+text = "option1"
+align = 1
+autowrap = true
+
+[node name="op2" type="Label" parent="VBoxContainer"]
+margin_top = 120.0
+margin_right = 600.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 3 )
+text = "option1"
+align = 1
+autowrap = true
+
+[node name="op3" type="Label" parent="VBoxContainer"]
+margin_top = 180.0
+margin_right = 600.0
+margin_bottom = 220.0
+custom_fonts/font = SubResource( 3 )
+text = "option1"
+align = 1
+autowrap = true
+
+[node name="op4" type="Label" parent="VBoxContainer"]
+margin_top = 240.0
+margin_right = 600.0
+margin_bottom = 280.0
+custom_fonts/font = SubResource( 3 )
+text = "option1"
+align = 1
+autowrap = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Assignments/AssignmentMenu.gd" type="Script" id=1]
+[ext_resource path="res://Background/background_desert.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Assignments/MenuBG.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Assignments/BackButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Quiz/medium.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.19418
+margin_top = -5.43024
+margin_right = 1.19421
+margin_bottom = -5.43018
+rect_scale = Vector2( 1.01257, 0.991298 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 306.499, 539.612 )
+texture = ExtResource( 2 )
+
+[node name="MenuBG" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( -6.74356, -86.3481 )
+scale = Vector2( 0.577773, 0.584355 )
+
+[node name="BackButton" parent="." instance=ExtResource( 4 )]
+margin_left = 112.634
+margin_top = 119.765
+margin_right = 825.634
+margin_bottom = 826.765
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 180.981
+margin_top = 107.594
+margin_right = 1605.98
+margin_bottom = 369.594
+rect_scale = Vector2( 0.263095, 0.353381 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Menu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 300.0
+margin_right = 2186.0
+margin_bottom = 3021.0
+rect_scale = Vector2( 0.212202, 0.179611 )
+custom_constants/separation = 300
+
+[node name="edit_assignment " type="Button" parent="VBoxContainer"]
+visible = false
+margin_top = 1007.0
+margin_right = 2086.0
+margin_bottom = 1714.0
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/edit_assignment "]
+margin_left = 93.6064
+margin_top = 154.945
+margin_right = 1518.61
+margin_bottom = 416.945
+rect_scale = Vector2( 1.35927, 1.82573 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Edit Assignment"
+align = 1
+
+[node name="create_assignment " type="Button" parent="VBoxContainer"]
+margin_right = 2086.0
+margin_bottom = 707.0
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/create_assignment "]
+margin_left = 68.3984
+margin_top = 145.01
+margin_right = 1493.4
+margin_bottom = 407.01
+rect_scale = Vector2( 1.35927, 1.82573 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Set Assignment"
+align = 1
+
+[node name="view_assignment" type="Button" parent="VBoxContainer"]
+margin_top = 1007.0
+margin_right = 2086.0
+margin_bottom = 1714.0
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/view_assignment"]
+margin_left = 108.106
+margin_top = 172.371
+margin_right = 1533.11
+margin_bottom = 434.371
+rect_scale = Vector2( 1.35927, 1.82573 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "View Assignment"
+align = 1
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/edit_assignment " to="." method="_on_edit_assignment__pressed"]
+[connection signal="pressed" from="VBoxContainer/create_assignment " to="." method="_on_create_assignment__pressed"]
+[connection signal="pressed" from="VBoxContainer/view_assignment" to="." method="_on_view_assignment_pressed"]

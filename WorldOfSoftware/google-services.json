@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "789029075854",
+    "firebase_url": "https://worldsoftware-9e78c.firebaseio.com",
+    "project_id": "worldsoftware-9e78c",
+    "storage_bucket": "worldsoftware-9e78c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789029075854:android:de493f25461695f18f42df",
+        "android_client_info": {
+          "package_name": "com.godot.WorldOfSoftware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789029075854-gs1dccb4vtb2ebs4sgppcmef3klqdriv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0v88aaGlCnuuoZKVZEJV0P4xGf6N_zbk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789029075854-gs1dccb4vtb2ebs4sgppcmef3klqdriv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Background/background_desert.png" type="Texture" id=1]
+
+[node name="background_desert" type="Sprite"]
+position = Vector2( 415.331, 518.554 )
+scale = Vector2( 0.965301, 0.957162 )
+texture = ExtResource( 1 )

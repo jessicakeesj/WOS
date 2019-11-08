@@ -1,0 +1,39 @@
+{
+	"1": {
+		"id": 1,
+		"name": "Cat",
+		"dialogue": "Hi! Welcome to World Of Software!",
+		"sprite": "Idle (1)"
+	},
+	"2": {
+		"id": 2,
+		"name": "Dog",
+		"dialogue": "...Oh? You are new around here?",
+		"sprite": "Run (1)"
+	},
+	"3": {
+		"id": 3,
+		"name": "Cat",
+		"dialogue": "Hmm..Don't worry, I can show you around!",
+		"sprite": "Idle (1)"
+	},
+	"4": {
+		"id": 4,
+		"name": "Dog",
+		"dialogue": "In World Of Software there are 4 main regions, some of which are locked on your map right now",
+		"sprite": "Idle (1)"
+	},
+	"5": {
+		"id": 5,
+		"name": "Cat",
+		"dialogue": "You can unlock them by progressing through each region and answering different questions related to the SDLC lifecycle",
+		"sprite": "Idle (1)"
+	},
+	"6": {
+		"id": 6,
+		"name": "Cat",
+		"dialogue": "Go ahead and click on the first region that is lighted up on your map",
+		"sprite": "Idle (1)"
+	}
+
+}

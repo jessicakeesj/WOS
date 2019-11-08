@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Home/Main.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Images/greenery.jpg" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_size = 15
+outline_color = Color( 0.666667, 0.376471, 0.156863, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/button-normal.png-3f53210e640512f93b070c8f9e6bd389.stex"
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/button-normal.png-3f53210e640512f93b070c8f9e6bd389.stex"
+
+[node name="Main" type="Control"]
+margin_top = 186.0
+margin_bottom = 186.0
+script = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -7.0
+margin_top = 610.0
+margin_right = 572.0
+margin_bottom = 658.0
+alignment = 1
+
+[node name="Title" type="Label" parent="."]
+margin_left = 10.0
+margin_right = 632.0
+margin_bottom = 554.0
+custom_fonts/font = SubResource( 1 )
+text = "World Of 
+Software"
+align = 1
+
+[node name="RegLabel" type="Label" parent="."]
+margin_left = 242.79
+margin_top = 349.212
+margin_right = 406.79
+margin_bottom = 441.212
+custom_fonts/font = SubResource( 2 )
+text = "Register"
+
+[node name="LoginLabel" type="Label" parent="."]
+margin_left = 270.0
+margin_top = 534.159
+margin_right = 543.0
+margin_bottom = 626.159
+custom_fonts/font = SubResource( 3 )
+text = "Login"
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="LoginButton" type="TextureButton" parent="ButtonLayer"]
+margin_left = 142.0
+margin_top = 506.212
+margin_right = 492.0
+margin_bottom = 626.212
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 4 )
+expand = true
+
+[node name="RegisterButton" type="TextureButton" parent="ButtonLayer"]
+margin_left = 142.0
+margin_top = 697.159
+margin_right = 492.0
+margin_bottom = 817.159
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 5 )
+expand = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+show_behind_parent = true
+position = Vector2( 956.156, 697.452 )
+scale = Vector2( 1, 1.29187 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="ButtonLayer/LoginButton" to="." method="_on_RegisterButton_pressed"]
+[connection signal="pressed" from="ButtonLayer/RegisterButton" to="." method="_on_LoginButton_pressed"]

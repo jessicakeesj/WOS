@@ -1,0 +1,295 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Scenes/Quiz/ChallangeListScene.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/bg1.png-f12a91b7fbd822e325b6c9109a1a7c77.stex"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 10
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/button-normal.png-3f53210e640512f93b070c8f9e6bd389.stex"
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/dialog_button.png-fe33083179c521dec6409fab61553dbb.stex"
+
+[sub_resource type="DynamicFont" id=7]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=9]
+flags = 4
+load_path = "res://.import/dialog_button.png-fe33083179c521dec6409fab61553dbb.stex"
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=11]
+flags = 4
+load_path = "res://.import/dialog_button.png-fe33083179c521dec6409fab61553dbb.stex"
+
+[sub_resource type="DynamicFont" id=12]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=13]
+flags = 4
+load_path = "res://.import/Window.png-b61aa0f78d5566179089614fbed6dc6d.stex"
+
+[sub_resource type="StreamTexture" id=14]
+flags = 4
+load_path = "res://.import/left.png-1d8f5aff07d79c850e994d38fdaecfcb.stex"
+
+[node name="ChallangeListScene" type="Node2D"]
+script = ExtResource( 1 )
+vbox_container = NodePath("ScrollContainer/VBoxContainer")
+background = NodePath("CanvasLayer/TextureRect")
+saveButton = NodePath("ButtonLayer/ChallengeButton")
+challengeButton = NodePath("ButtonLayer/ChallengeButton")
+popupDialog = NodePath("PopUpLayer/CanvasLayer/TextureRect")
+popupLabel = NodePath("PopUpLayer/DialogLabel")
+popupLabelDesc = NodePath("PopUpLayer/DialogDesc")
+popupButton = NodePath("PopUpLayer/DialogButton")
+popupButtonTxt = NodePath("PopUpLayer/DialogButtonLabel")
+popupFBTxt = NodePath("PopUpLayer/FBButtonLabel")
+popupFBBtn = NodePath("PopUpLayer/FBButton")
+popupTwitTxt = NodePath("PopUpLayer/TwitButtonLabel")
+popupTwitBtn = NodePath("PopUpLayer/TwitButton")
+popupShareLabel = NodePath("PopUpLayer/ShareLabel")
+
+[node name="ListBackgroundLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ListBackground" type="TextureButton" parent="ListBackgroundLayer"]
+margin_left = 19.0
+margin_top = 133.0
+margin_right = 600.0
+margin_bottom = 929.0
+texture_normal = SubResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 29.0
+margin_top = 7.0
+margin_right = 589.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 2 )
+text = "Question List"
+align = 1
+valign = 1
+
+[node name="ChallengeLabel" type="Label" parent="."]
+margin_left = 31.0
+margin_top = 940.0
+margin_right = 591.0
+margin_bottom = 1060.0
+custom_fonts/font = SubResource( 2 )
+text = "CHALLENGE"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+editor/display_folded = true
+margin_left = 45.0
+margin_top = 155.0
+margin_right = 570.0
+margin_bottom = 880.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 1100.0
+rect_min_size = Vector2( 1100, 0 )
+mouse_filter = 2
+custom_constants/separation = 50
+
+[node name="upButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 453.104
+margin_top = 150.0
+margin_right = 533.104
+margin_bottom = 230.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="downButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 453.104
+margin_top = 734.917
+margin_right = 533.104
+margin_bottom = 814.917
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = -2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ChallengeButton" type="TextureButton" parent="ButtonLayer"]
+margin_left = 29.538
+margin_top = 930.0
+margin_right = 589.538
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 3 )
+expand = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="PopUpLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = 3
+
+[node name="DialogDesc" type="Label" parent="PopUpLayer"]
+visible = false
+margin_left = 121.0
+margin_top = 400.0
+margin_right = 510.0
+margin_bottom = 578.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+
+[node name="DialogLabel" type="Label" parent="PopUpLayer"]
+visible = false
+margin_left = 117.0
+margin_top = 300.0
+margin_right = 517.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 5 )
+text = "CORRECT"
+align = 1
+
+[node name="DialogButton" type="TextureButton" parent="PopUpLayer"]
+visible = false
+margin_left = 226.0
+margin_top = 741.0
+margin_right = 399.0
+margin_bottom = 817.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 6 )
+expand = true
+
+[node name="DialogButtonLabel" type="Label" parent="PopUpLayer"]
+visible = false
+margin_left = 220.0
+margin_top = 747.0
+margin_right = 410.0
+margin_bottom = 807.0
+custom_fonts/font = SubResource( 7 )
+text = "OK"
+align = 1
+
+[node name="ShareLabel" type="Label" parent="PopUpLayer"]
+visible = false
+margin_left = 100.0
+margin_top = 600.0
+margin_right = 350.0
+margin_bottom = 660.0
+custom_fonts/font = SubResource( 8 )
+text = "Share to:"
+
+[node name="FBButton" type="TextureButton" parent="PopUpLayer"]
+visible = false
+margin_left = 100.0
+margin_top = 650.0
+margin_right = 273.0
+margin_bottom = 726.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 9 )
+expand = true
+
+[node name="FBButtonLabel" type="Label" parent="PopUpLayer"]
+visible = false
+margin_left = 125.0
+margin_top = 665.0
+margin_right = 375.0
+margin_bottom = 725.0
+custom_fonts/font = SubResource( 10 )
+text = "Facebook"
+
+[node name="TwitButton" type="TextureButton" parent="PopUpLayer"]
+visible = false
+margin_left = 350.0
+margin_top = 650.0
+margin_right = 523.0
+margin_bottom = 726.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="TwitButtonLabel" type="Label" parent="PopUpLayer"]
+visible = false
+margin_left = 380.0
+margin_top = 665.0
+margin_right = 630.0
+margin_bottom = 725.0
+custom_fonts/font = SubResource( 12 )
+text = "Twitter"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PopUpLayer"]
+
+[node name="TextureRect" type="TextureButton" parent="PopUpLayer/CanvasLayer"]
+visible = false
+margin_left = 32.0
+margin_top = 200.0
+margin_right = 592.0
+margin_bottom = 900.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 13 )
+expand = true
+
+[node name="BackLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="BacKButton" type="TextureButton" parent="BackLayer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 14 )
+expand = true
+[connection signal="pressed" from="downButton" to="." method="_on_downButton_pressed"]
+[connection signal="pressed" from="ButtonLayer/ChallengeButton" to="." method="_on_ChallengeButton_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="PopUpLayer/DialogButton" to="." method="_on_DialogButton_pressed"]
+[connection signal="pressed" from="PopUpLayer/FBButton" to="." method="_on_FBButton_pressed"]
+[connection signal="pressed" from="PopUpLayer/TwitButton" to="." method="_on_TwitButton_pressed"]
+[connection signal="pressed" from="BackLayer/BacKButton" to="." method="_on_BacKButton_pressed"]

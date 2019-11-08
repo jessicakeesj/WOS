@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/SummaryReport/classList.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/SFWonderComic-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Quiz/medium.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 2074, 701 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 35
+font_data = ExtResource( 2 )
+
+[node name="ClassPanel" type="Panel"]
+margin_left = 29.0
+margin_top = 90.0
+margin_right = 1250.0
+margin_bottom = 165.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Index" type="Label" parent="."]
+margin_left = 15.737
+margin_top = 6.842
+margin_right = 174.737
+margin_bottom = 65.842
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Index"
+align = 1
+valign = 1
+
+[node name="StudentCount" type="Label" parent="."]
+margin_left = 463.211
+margin_top = 12.632
+margin_right = 714.211
+margin_bottom = 55.632
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "StudentCount"
+align = 1
+valign = 1
+
+[node name="ClassName" type="Button" parent="."]
+margin_left = 197.916
+margin_top = 13.311
+margin_right = 440.916
+margin_bottom = 56.311
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ClassName"
+clip_text = true
+
+[node name="Average" type="Label" parent="."]
+margin_left = 708.0
+margin_top = 14.0
+margin_right = 963.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Average"
+align = 1
+valign = 1
+
+[node name="Performance" type="Label" parent="."]
+margin_left = 972.526
+margin_top = 11.579
+margin_right = 1223.53
+margin_bottom = 54.579
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Performance"
+align = 1
+valign = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="ClassName" to="." method="_on_ClassName_pressed"]

@@ -1,0 +1,409 @@
+[gd_scene load_steps=118 format=2]
+
+[ext_resource path="res://Scenes/CharacterSelection/CharacterSelection.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (2).png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (3).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (4).png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (5).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (6).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (7).png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (8).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (9).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Cat/Cat_Head/cat_head (1).png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (2).png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (3).png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (4).png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (5).png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (6).png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (7).png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (8).png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (9).png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Dog/Dog_Head/dog_head (1).png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (2).png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (3).png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (4).png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (5).png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (6).png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (7).png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (8).png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (9).png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Jack/Jack_Head/jack_head (1).png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (2).png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (3).png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (4).png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (5).png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (6).png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (7).png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (8).png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (9).png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (10).png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Robot/Robot_Head/robot_head (1).png" type="Texture" id=39]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (2).png" type="Texture" id=40]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (3).png" type="Texture" id=41]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (4).png" type="Texture" id=42]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (5).png" type="Texture" id=43]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (6).png" type="Texture" id=44]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (7).png" type="Texture" id=45]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (8).png" type="Texture" id=46]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (9).png" type="Texture" id=47]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (10).png" type="Texture" id=48]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (11).png" type="Texture" id=49]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (12).png" type="Texture" id=50]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (13).png" type="Texture" id=51]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (14).png" type="Texture" id=52]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (15).png" type="Texture" id=53]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (16).png" type="Texture" id=54]
+[ext_resource path="res://Sprites/ZombieM/ZombieM_Head/zombiem_head (1).png" type="Texture" id=55]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (2).png" type="Texture" id=56]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (3).png" type="Texture" id=57]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (4).png" type="Texture" id=58]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (5).png" type="Texture" id=59]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (6).png" type="Texture" id=60]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (7).png" type="Texture" id=61]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (8).png" type="Texture" id=62]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (9).png" type="Texture" id=63]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (10).png" type="Texture" id=64]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (11).png" type="Texture" id=65]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (12).png" type="Texture" id=66]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (13).png" type="Texture" id=67]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (14).png" type="Texture" id=68]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (15).png" type="Texture" id=69]
+[ext_resource path="res://Sprites/ZombieF/ZombieF_Head/zombief_head (1).png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (2).png" type="Texture" id=71]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (3).png" type="Texture" id=72]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (4).png" type="Texture" id=73]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (5).png" type="Texture" id=74]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (6).png" type="Texture" id=75]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (7).png" type="Texture" id=76]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (8).png" type="Texture" id=77]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (9).png" type="Texture" id=78]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (10).png" type="Texture" id=79]
+[ext_resource path="res://Sprites/Ninja/Ninja_Head/ninja_head (1).png" type="Texture" id=80]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (2).png" type="Texture" id=81]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (3).png" type="Texture" id=82]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (4).png" type="Texture" id=83]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (5).png" type="Texture" id=84]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (6).png" type="Texture" id=85]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (7).png" type="Texture" id=86]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (8).png" type="Texture" id=87]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (9).png" type="Texture" id=88]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (10).png" type="Texture" id=89]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (11).png" type="Texture" id=90]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (12).png" type="Texture" id=91]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (13).png" type="Texture" id=92]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (14).png" type="Texture" id=93]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (15).png" type="Texture" id=94]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (16).png" type="Texture" id=95]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (17).png" type="Texture" id=96]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (18).png" type="Texture" id=97]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (19).png" type="Texture" id=98]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (20).png" type="Texture" id=99]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (21).png" type="Texture" id=100]
+[ext_resource path="res://Sprites/Box/Box_Head/box_head (1).png" type="Texture" id=101]
+[ext_resource path="res://Assets/Worlds/select_button (2).png" type="Texture" id=102]
+[ext_resource path="res://Scenes/LoadingScreen.tscn" type="PackedScene" id=103]
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=104]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [  ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 164.695, 189.711 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 90.8387, 74.7607 )
+
+[node name="CharacterSelection" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 71.829
+margin_top = 30.273
+margin_right = 534.829
+margin_bottom = 313.273
+rect_scale = Vector2( 1.01877, 0.884944 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Choose your character"
+
+[node name="CharPreview" type="AnimatedSprite" parent="."]
+position = Vector2( 115.906, 528.345 )
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 2 )
+animation = "cat_run"
+frame = 3
+playing = true
+
+[node name="CharName" type="Label" parent="."]
+margin_left = 62.5955
+margin_top = 699.343
+margin_right = 238.595
+margin_bottom = 780.343
+custom_fonts/font = SubResource( 3 )
+
+[node name="Characters" type="Node2D" parent="."]
+position = Vector2( 40, 110 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CatArea" type="Area2D" parent="Characters"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cat" type="AnimatedSprite" parent="Characters/CatArea"]
+position = Vector2( 328.723, 317.009 )
+scale = Vector2( 0.448208, 0.456624 )
+frames = SubResource( 4 )
+animation = "idle"
+frame = 8
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/CatArea"]
+position = Vector2( 328.723, 317.009 )
+scale = Vector2( 0.448208, 0.456624 )
+shape = SubResource( 5 )
+
+[node name="DogArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Dog" type="AnimatedSprite" parent="Characters/DogArea"]
+position = Vector2( 490.536, 318.441 )
+scale = Vector2( 0.448208, 0.456624 )
+frames = SubResource( 6 )
+animation = "idle"
+frame = 1
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/DogArea"]
+position = Vector2( 490.536, 318.441 )
+scale = Vector2( 0.448208, 0.456624 )
+shape = SubResource( 5 )
+
+[node name="JackArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+
+[node name="Jack" type="AnimatedSprite" parent="Characters/JackArea"]
+position = Vector2( 335.961, 489.3 )
+scale = Vector2( 0.302837, 0.294651 )
+frames = SubResource( 7 )
+animation = "idle"
+frame = 6
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/JackArea"]
+position = Vector2( 329.62, 502.576 )
+scale = Vector2( 0.454256, 0.441977 )
+shape = SubResource( 5 )
+
+[node name="RobotArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+
+[node name="Robot" type="AnimatedSprite" parent="Characters/RobotArea"]
+position = Vector2( 501.58, 496.595 )
+scale = Vector2( 0.448208, 0.456624 )
+frames = SubResource( 8 )
+animation = "idle"
+frame = 5
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/RobotArea"]
+position = Vector2( 501.58, 496.595 )
+scale = Vector2( 0.448208, 0.456624 )
+shape = SubResource( 5 )
+
+[node name="ZombieMArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+
+[node name="ZombieM" type="AnimatedSprite" parent="Characters/ZombieMArea"]
+position = Vector2( 334.178, 688.006 )
+scale = Vector2( 0.448208, 0.456624 )
+frames = SubResource( 9 )
+animation = "idle"
+frame = 10
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/ZombieMArea"]
+position = Vector2( 334.178, 688.006 )
+scale = Vector2( 0.448208, 0.456624 )
+shape = SubResource( 5 )
+
+[node name="ZombieFArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+
+[node name="ZombieF" type="AnimatedSprite" parent="Characters/ZombieFArea"]
+position = Vector2( 501.26, 691.481 )
+scale = Vector2( 0.448208, 0.456624 )
+frames = SubResource( 10 )
+animation = "idle"
+frame = 6
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/ZombieFArea"]
+position = Vector2( 501.26, 691.481 )
+scale = Vector2( 0.448208, 0.456624 )
+shape = SubResource( 5 )
+
+[node name="NinjaArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+
+[node name="Ninja" type="AnimatedSprite" parent="Characters/NinjaArea"]
+position = Vector2( 507.91, 883.49 )
+scale = Vector2( 0.448208, 0.456624 )
+frames = SubResource( 11 )
+animation = "idle"
+frame = 8
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/NinjaArea"]
+position = Vector2( 507.91, 883.49 )
+scale = Vector2( 0.448208, 0.456624 )
+shape = SubResource( 5 )
+
+[node name="BoxArea" type="Area2D" parent="Characters"]
+editor/display_folded = true
+
+[node name="Box" type="AnimatedSprite" parent="Characters/BoxArea"]
+position = Vector2( 332.638, 867.071 )
+scale = Vector2( 1.06181, 1.0879 )
+frames = SubResource( 12 )
+animation = "idle"
+frame = 8
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/BoxArea"]
+position = Vector2( 329.221, 885.623 )
+scale = Vector2( 0.530907, 0.435161 )
+shape = SubResource( 5 )
+
+[node name="BtnArea" type="Area2D" parent="."]
+position = Vector2( 0, 300 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NextBtn" type="Sprite" parent="BtnArea"]
+position = Vector2( 140, 820 )
+scale = Vector2( 1.31066, 1.17126 )
+texture = ExtResource( 102 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BtnArea"]
+position = Vector2( 124.427, 849.671 )
+shape = SubResource( 13 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="LoadingScreen" parent="." instance=ExtResource( 103 )]
+
+[node name="Bg" parent="." instance=ExtResource( 104 )]
+position = Vector2( 2199.03, -883.885 )
+[connection signal="input_event" from="Characters/CatArea" to="." method="_on_CatArea_input_event"]
+[connection signal="input_event" from="Characters/DogArea" to="." method="_on_DogArea_input_event"]
+[connection signal="input_event" from="Characters/JackArea" to="." method="_on_JackArea_input_event"]
+[connection signal="input_event" from="Characters/RobotArea" to="." method="_on_RobotArea_input_event"]
+[connection signal="input_event" from="Characters/ZombieMArea" to="." method="_on_ZombieMArea_input_event"]
+[connection signal="input_event" from="Characters/ZombieFArea" to="." method="_on_ZombieFArea_input_event"]
+[connection signal="input_event" from="Characters/NinjaArea" to="." method="_on_NinjaArea_input_event"]
+[connection signal="input_event" from="Characters/BoxArea" to="." method="_on_BoxArea_input_event"]
+[connection signal="input_event" from="BtnArea" to="." method="_on_BtnArea_input_event"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

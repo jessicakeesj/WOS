@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Assignments/GiveAssignmnet.gd" type="Script" id=1]
+[ext_resource path="res://Background/background_desert.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Assignments/MenuBG.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/Assignments/BackButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/Facebook-share-icon.png" type="Texture" id=6]
+[ext_resource path="res://Images/246x0w.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 600
+font_data = ExtResource( 4 )
+
+[node name="GiveAssignmnet" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.4436
+margin_top = -5.47649
+margin_right = -2.4436
+margin_bottom = -5.4765
+script = ExtResource( 1 )
+
+[node name="background_desert" type="Sprite" parent="."]
+position = Vector2( 414.201, 543.315 )
+texture = ExtResource( 2 )
+
+[node name="MenuBG" parent="." instance=ExtResource( 3 )]
+position = Vector2( 245.541, 544.672 )
+offset = Vector2( 110.9, -71.8009 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 79.729
+margin_top = 22.7729
+margin_right = 486.729
+margin_bottom = 88.773
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Share Assignment"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 3588.0
+margin_bottom = 904.0
+rect_scale = Vector2( 0.0844766, 0.084257 )
+custom_constants/separation = 300
+
+[node name="BackButton" parent="HBoxContainer" instance=ExtResource( 5 )]
+margin_bottom = 784.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="Share via" type="Label" parent="HBoxContainer"]
+margin_left = 1013.0
+margin_right = 3528.0
+margin_bottom = 784.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Share Via"
+
+[node name="FBButton" type="Button" parent="."]
+margin_left = 110.814
+margin_top = 357.061
+margin_right = 923.814
+margin_bottom = 1164.06
+rect_scale = Vector2( 0.21901, 0.21901 )
+icon = ExtResource( 6 )
+flat = true
+
+[node name="TwitButton" type="Button" parent="."]
+margin_left = 312.44
+margin_top = 342.685
+margin_right = 570.44
+margin_bottom = 594.685
+rect_scale = Vector2( 0.782923, 0.782923 )
+icon = ExtResource( 7 )
+flat = true
+
+[node name="Share via2" type="Label" parent="."]
+margin_left = 49.4896
+margin_top = 244.8
+margin_right = 8444.49
+margin_bottom = 1815.8
+rect_scale = Vector2( 0.0609011, 0.0609011 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Share your quiz on social media
+with your students. "
+align = 1
+[connection signal="pressed" from="HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="FBButton" to="." method="_on_FBButton_pressed"]
+[connection signal="pressed" from="TwitButton" to="." method="_on_TwitButton_pressed"]

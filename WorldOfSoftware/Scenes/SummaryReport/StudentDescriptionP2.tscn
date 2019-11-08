@@ -1,0 +1,127 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Fonts/SFWonderComic-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="WorldsPanel" type="Panel"]
+margin_right = 868.0
+margin_bottom = 440.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="AttemptAnswer" type="Label" parent="."]
+margin_left = 443.821
+margin_top = 181.361
+margin_right = 624.821
+margin_bottom = 242.361
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Answer"
+align = 1
+valign = 1
+
+[node name="LatestAttempt" type="Label" parent="."]
+margin_left = 11.3844
+margin_top = 179.222
+margin_right = 322.385
+margin_bottom = 238.222
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LatestAttempt"
+align = 1
+valign = 1
+
+[node name="MasteryLvl" type="Label" parent="."]
+margin_left = 10.3278
+margin_top = 244.488
+margin_right = 219.328
+margin_bottom = 303.488
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MasteryLvl"
+align = 1
+valign = 1
+
+[node name="MasteryAnswer" type="Label" parent="."]
+margin_left = 446.507
+margin_top = 248.166
+margin_right = 627.507
+margin_bottom = 309.166
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Answer"
+
+[node name="TotalScore" type="Label" parent="."]
+margin_left = 9.3074
+margin_top = 319.024
+margin_right = 211.308
+margin_bottom = 378.024
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TotalScore"
+align = 1
+valign = 1
+
+[node name="ScoreAnswer" type="Label" parent="."]
+margin_left = 443.328
+margin_top = 312.818
+margin_right = 624.328
+margin_bottom = 373.818
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Answer"
+
+[node name="Section" type="Label" parent="."]
+margin_left = 9.3463
+margin_top = 8.2964
+margin_right = 153.346
+margin_bottom = 67.2964
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Section"
+align = 1
+valign = 1
+
+[node name="Level" type="Label" parent="."]
+margin_left = 12.049
+margin_top = 76.9141
+margin_right = 138.049
+margin_bottom = 142.914
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level"
+align = 1
+valign = 1

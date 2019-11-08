@@ -1,0 +1,33 @@
+{ 
+   "1":{ 
+      "id":1,
+      "name":"Cat",
+      "dialogue":"Welcome to World of Software",
+	  "sprite":"Idle (1)",
+   },
+   "2":{ 
+      "id":2,
+      "name":"Dog",
+      "dialogue":"Blahbalbhablabbahablabbalbah",
+	  "sprite":"Run (1)",
+   },
+   "3":{ 
+      "id":3,
+      "name":"Cat",
+       "dialogue":"Select world 1",
+	   "sprite":"Idle (1)",
+   },
+   "4":{ 
+      "id":4,
+      "name":"Dog",
+       "dialogue":"world 1",
+	   "sprite":"Idle (1)",
+   },
+   "5":{ 
+      "id":5,
+      "name":"Cat",
+       "dialogue":"gASDAQWEGASD",
+	   "sprite":"Idle (1)",
+   },
+   
+}

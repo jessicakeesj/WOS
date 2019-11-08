@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/SFWonderComic-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+margin_top = -2.0
+margin_right = 846.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="StudentName" type="Label" parent="."]
+margin_left = -5.0
+margin_top = 27.0
+margin_right = 158.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Student"
+align = 1
+valign = 1
+
+[node name="BestSectionName" type="Label" parent="."]
+margin_left = 244.0
+margin_top = 31.0
+margin_right = 499.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "BestSection"
+align = 1
+valign = 1
+
+[node name="WeakSectionName" type="Label" parent="."]
+margin_left = 561.0
+margin_top = 31.0
+margin_right = 830.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "WeakSection"
+align = 1
+valign = 1

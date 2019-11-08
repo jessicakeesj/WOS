@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Worlds/LevelSelection.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Worlds/WorldLevels.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Worlds/bg.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Dialouge/Dialogue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/LoadingScreen.tscn" type="PackedScene" id=5]
+
+[node name="LevelSelection" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="LevelSelection" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -2.45551 )
+
+[node name="Background" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( -22.1631, -25.8212 )
+scale = Vector2( 0.537908, 0.9399 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Dialogue" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = 5.57898
+margin_top = 117.898
+margin_right = 5.57898
+margin_bottom = 117.898
+
+[node name="LoadingScreen" parent="." instance=ExtResource( 5 )]
+visible = false
+[connection signal="left_clicked" from="LevelSelection" to="." method="_on_LevelSelection_left_clicked"]
+[connection signal="right_clicked" from="LevelSelection" to="." method="_on_LevelSelection_right_clicked"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

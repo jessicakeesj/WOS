@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/DK Cover Up.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/SFWonderComic-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+margin_left = 5.0
+margin_top = 59.0
+margin_right = 861.0
+margin_bottom = 373.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Email" type="Label" parent="."]
+margin_left = 9.47369
+margin_top = -4.21051
+margin_right = 86.4737
+margin_bottom = 38.7895
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Email"
+align = 1
+valign = 1
+
+[node name="StudentEmail" type="Label" parent="."]
+margin_left = 361.0
+margin_top = -6.0
+margin_right = 845.0
+margin_bottom = 63.0
+size_flags_horizontal = 5
+size_flags_stretch_ratio = 47.8
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "StudentEmail"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="CompletedTutorial" type="Label" parent="."]
+margin_left = 11.2277
+margin_top = 82.5942
+margin_right = 412.228
+margin_bottom = 149.594
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tutorial"
+
+[node name="TutorialAnswer" type="Label" parent="."]
+margin_left = 504.909
+margin_top = 82.0804
+margin_right = 720.909
+margin_bottom = 155.08
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Answer"
+
+[node name="Completed" type="Label" parent="."]
+margin_left = 3.68329
+margin_top = 164.517
+margin_right = 404.683
+margin_bottom = 237.517
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Completed"
+
+[node name="CompletedAnswer" type="Label" parent="."]
+margin_left = 586.0
+margin_top = 166.0
+margin_right = 781.0
+margin_bottom = 232.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Answer"

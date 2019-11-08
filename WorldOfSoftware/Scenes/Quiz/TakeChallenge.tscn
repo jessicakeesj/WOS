@@ -1,0 +1,374 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Scenes/Quiz/TakeChallenge.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Quiz/Xolonium-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Quiz/World1/dialog_button.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Quiz/World1/Window.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 18
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 45
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 45
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="StreamTexture" id=11]
+flags = 4
+load_path = "res://.import/left.png-1d8f5aff07d79c850e994d38fdaecfcb.stex"
+
+[node name="mainNode" type="Node2D"]
+script = ExtResource( 1 )
+questionTextPath = NodePath("QnText")
+optionBtn1 = NodePath("ButtonLayer/OptionButton1")
+optionBtn2 = NodePath("ButtonLayer/OptionButton2")
+optionBtn3 = NodePath("ButtonLayer/OptionButton3")
+optionBtn4 = NodePath("ButtonLayer/OptionButton4")
+optionLabel1 = NodePath("OptionTextLayer/Option1Text")
+optionLabel2 = NodePath("OptionTextLayer/Option2Text")
+optionLabel3 = NodePath("OptionTextLayer/Option3Text")
+optionLabel4 = NodePath("OptionTextLayer/Option4Text")
+background = NodePath("BackgroundLayer/TextureRect")
+popupDialog = NodePath("PopupLayer/CanvasLayer/DialogBackground")
+popupLabel = NodePath("PopupLayer/DialogLabel")
+popupLabelDesc = NodePath("PopupLayer/DialogDesc")
+scoreLabel = NodePath("ScoreLayer/Score")
+popupButton = NodePath("PopupLayer/DialogButton")
+popupButtonTxt = NodePath("PopupLayer/DialogButtonLabel")
+challengekeytext = NodePath("ChallengeKeyLayer/LineEdit")
+challengekeybutton = NodePath("ChallengeKeyLayer/InputButton")
+challengeKeyDialog = NodePath("ChallengeKeyLayer/background/InputBackground")
+challengeKeyTitle = NodePath("ChallengeKeyLayer/keytitle")
+challengeKeyBtnLabel = NodePath("ChallengeKeyLayer/InputButtonLabel")
+backButton = NodePath("BackLayer/BackButton")
+
+[node name="QnText" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 41.0
+margin_right = 622.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Question"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ScoreLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreTxt" type="Label" parent="ScoreLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -568.47
+margin_top = -124.0
+margin_right = -8.46973
+margin_bottom = -3.99988
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "  Current Score:"
+valign = 1
+autowrap = true
+
+[node name="Score" type="Label" parent="ScoreLayer"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -166.0
+margin_top = -124.0
+margin_right = -66.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="OptionTextLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = -1
+
+[node name="Option1Text" type="Label" parent="OptionTextLayer"]
+margin_left = 2.0
+margin_top = 300.0
+margin_right = 622.0
+margin_bottom = 420.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Option2Text" type="Label" parent="OptionTextLayer"]
+margin_left = 2.0
+margin_top = 450.0
+margin_right = 622.0
+margin_bottom = 570.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Option3Text" type="Label" parent="OptionTextLayer"]
+margin_left = 2.0
+margin_top = 600.0
+margin_right = 622.0
+margin_bottom = 720.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Option4Text" type="Label" parent="OptionTextLayer"]
+margin_left = 2.0
+margin_top = 750.0
+margin_right = 622.0
+margin_bottom = 870.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = -2
+
+[node name="OptionButton1" type="TextureButton" parent="ButtonLayer"]
+margin_left = 2.0
+margin_top = 300.0
+margin_right = 622.0
+margin_bottom = 420.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="OptionButton2" type="TextureButton" parent="ButtonLayer"]
+margin_left = 2.0
+margin_top = 450.0
+margin_right = 622.0
+margin_bottom = 570.0
+expand = true
+
+[node name="OptionButton3" type="TextureButton" parent="ButtonLayer"]
+margin_left = 2.0
+margin_top = 600.0
+margin_right = 622.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="OptionButton4" type="TextureButton" parent="ButtonLayer"]
+margin_left = 2.0
+margin_top = 750.0
+margin_right = 622.0
+margin_bottom = 870.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = -3
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundLayer"]
+margin_left = -7.0
+margin_top = 10.3604
+margin_right = 1607.0
+margin_bottom = 1099.36
+stretch_mode = 1
+
+[node name="PopupLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = 2
+
+[node name="DialogDesc" type="Label" parent="PopupLayer"]
+visible = false
+margin_left = 121.0
+margin_top = 523.0
+margin_right = 510.0
+margin_bottom = 701.0
+custom_fonts/font = SubResource( 6 )
+align = 1
+autowrap = true
+
+[node name="DialogLabel" type="Label" parent="PopupLayer"]
+visible = false
+margin_left = 117.0
+margin_top = 374.0
+margin_right = 517.0
+margin_bottom = 521.0
+custom_fonts/font = SubResource( 7 )
+text = "CORRECT!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="DialogButton" type="TextureButton" parent="PopupLayer"]
+visible = false
+margin_left = 226.0
+margin_top = 741.0
+margin_right = 399.0
+margin_bottom = 817.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="DialogButtonLabel" type="Label" parent="PopupLayer"]
+visible = false
+margin_left = 271.0
+margin_top = 747.0
+margin_right = 356.0
+margin_bottom = 807.0
+custom_fonts/font = SubResource( 8 )
+text = "Ok"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PopupLayer"]
+
+[node name="DialogBackground" type="TextureButton" parent="PopupLayer/CanvasLayer"]
+visible = false
+margin_left = 32.0
+margin_top = 278.0
+margin_right = 592.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="ChallengeKeyLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="background" type="CanvasLayer" parent="ChallengeKeyLayer"]
+editor/display_folded = true
+
+[node name="InputBackground" type="TextureButton" parent="ChallengeKeyLayer/background"]
+margin_left = 32.0
+margin_top = 278.0
+margin_right = 592.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="keytitle" type="Label" parent="ChallengeKeyLayer"]
+margin_left = 125.0
+margin_top = 463.808
+margin_right = 506.0
+margin_bottom = 551.808
+custom_fonts/font = SubResource( 9 )
+text = "Challenge Key:"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="InputButton" type="TextureButton" parent="ChallengeKeyLayer"]
+margin_left = 226.0
+margin_top = 720.0
+margin_right = 399.0
+margin_bottom = 796.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="InputButtonLabel" type="Label" parent="ChallengeKeyLayer"]
+margin_left = 271.0
+margin_top = 720.0
+margin_right = 356.0
+margin_bottom = 780.0
+custom_fonts/font = SubResource( 8 )
+text = "Ok"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="LineEdit" type="LineEdit" parent="ChallengeKeyLayer"]
+margin_left = 112.726
+margin_top = 590.549
+margin_right = 520.726
+margin_bottom = 667.549
+custom_fonts/font = SubResource( 10 )
+
+[node name="BackLayer" type="CanvasLayer" parent="."]
+
+[node name="BackButton" type="TextureButton" parent="BackLayer"]
+margin_left = 20.0
+margin_top = 900.0
+margin_right = 100.0
+margin_bottom = 980.0
+texture_normal = SubResource( 11 )
+expand = true
+[connection signal="pressed" from="ButtonLayer/OptionButton1" to="." method="_on_OptionButton1_pressed"]
+[connection signal="pressed" from="ButtonLayer/OptionButton2" to="." method="_on_OptionButton2_pressed"]
+[connection signal="pressed" from="ButtonLayer/OptionButton3" to="." method="_on_OptionButton3_pressed"]
+[connection signal="pressed" from="ButtonLayer/OptionButton4" to="." method="_on_OptionButton4_pressed"]
+[connection signal="pressed" from="PopupLayer/DialogButton" to="." method="_on_DialogButton_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="ChallengeKeyLayer/InputButton" to="." method="_on_InputButton_pressed"]
+[connection signal="pressed" from="BackLayer/BackButton" to="." method="_on_BackButton_pressed"]

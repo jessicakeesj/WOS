@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[node name="Panel" type="Panel"]
+margin_right = 814.0
+margin_bottom = 82.0
+custom_styles/panel = SubResource( 1 )

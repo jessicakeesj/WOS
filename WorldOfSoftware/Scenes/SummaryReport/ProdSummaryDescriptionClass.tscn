@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/SFWonderComic-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+margin_left = 31.0
+margin_top = 58.0
+margin_right = 845.0
+margin_bottom = 391.0
+
+[node name="ClassWeakSection" type="Label" parent="."]
+margin_left = 91.0
+margin_top = 227.0
+margin_right = 776.0
+margin_bottom = 324.0
+custom_fonts/font = SubResource( 1 )
+text = "ClassWeakSection"
+align = 1
+valign = 1
+
+[node name="ClassStrongSection" type="Label" parent="."]
+margin_left = 28.0
+margin_top = 80.0
+margin_right = 804.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 2 )
+text = "ClassStrongSection"
+align = 1
+valign = 1
+
+[node name="ClassWeakHeader" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 13.0
+margin_right = 282.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 3 )
+text = "WeakHeader"
+align = 1
+valign = 1
+
+[node name="ClassStrongHeader" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 167.0
+margin_right = 329.0
+margin_bottom = 233.0
+custom_fonts/font = SubResource( 4 )
+text = "StrongHeader"

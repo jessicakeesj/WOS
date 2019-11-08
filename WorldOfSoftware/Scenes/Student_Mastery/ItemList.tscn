@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Images/star_2.png" type="Texture" id=2]
+[ext_resource path="res://Images/star_3.png" type="Texture" id=3]
+[ext_resource path="res://Images/star_1.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="Panel" type="Panel"]
+margin_left = 3.03589
+margin_top = 25.8377
+margin_right = 558.036
+margin_bottom = 201.838
+custom_styles/panel = SubResource( 1 )
+
+[node name="Id" type="Label" parent="."]
+margin_left = 18.813
+margin_top = 10.9548
+margin_right = 97.813
+margin_bottom = 142.955
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+valign = 1
+
+[node name="Name" type="Label" parent="."]
+margin_left = 104.356
+margin_top = 14.8771
+margin_right = 404.356
+margin_bottom = 146.877
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "J"
+align = 1
+valign = 1
+
+[node name="quesNo" type="Label" parent="."]
+margin_left = 115.981
+margin_top = 129.594
+margin_right = 432.981
+margin_bottom = 169.594
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.117647, 0.211765, 0.352941, 1 )
+text = "Attempted 41Questions"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 523.126
+margin_top = 24.9548
+margin_right = 587.634
+margin_bottom = 115.955
+
+[node name="2Star" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 88.9342, 55.7113 )
+scale = Vector2( 0.258, 0.289 )
+texture = ExtResource( 2 )
+
+[node name="1Star" type="Sprite" parent="VBoxContainer"]
+visible = false
+position = Vector2( 106.519, 47.549 )
+scale = Vector2( 0.258317, 0.289412 )
+texture = ExtResource( 3 )
+
+[node name="3Star" type="Sprite" parent="VBoxContainer"]
+visible = false
+position = Vector2( 106.619, 47.5493 )
+scale = Vector2( 0.258, 0.289 )
+texture = ExtResource( 4 )

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/Candy Beans.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+font_data = ExtResource( 1 )
+
+[node name="Panel" type="Panel"]
+margin_left = 42.0
+margin_top = 90.0
+margin_right = 1521.0
+margin_bottom = 165.0
+
+[node name="IndexHeader" type="Label" parent="."]
+margin_left = 31.887
+margin_top = 5.892
+margin_right = 190.887
+margin_bottom = 64.892
+custom_fonts/font = SubResource( 1 )
+text = "Index"
+align = 1
+valign = 1
+
+[node name="NameHeader" type="Label" parent="."]
+margin_left = 220.462
+margin_top = 13.0331
+margin_right = 437.462
+margin_bottom = 60.0331
+custom_fonts/font = SubResource( 2 )
+text = "Name"
+align = 1
+valign = 1
+
+[node name="EmailHeader" type="Label" parent="."]
+margin_left = 625.454
+margin_top = 14.2541
+margin_right = 834.454
+margin_bottom = 61.2541
+custom_fonts/font = SubResource( 6 )
+text = "Email"
+align = 1
+valign = 1
+
+[node name="AnoHeader" type="Label" parent="."]
+margin_left = 1270.4
+margin_top = 13.05
+margin_right = 1477.4
+margin_bottom = 60.05
+custom_fonts/font = SubResource( 4 )
+text = "Another"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1027.9
+margin_top = 11.4
+margin_right = 1232.9
+margin_bottom = 58.4
+custom_fonts/font = SubResource( 5 )
+text = "T.Completion"
+align = 1
+valign = 1
