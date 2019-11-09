@@ -53,7 +53,7 @@ func addItem(value):
 	$Panel/MenuBG/ScrollContainer/VBoxContainer.add_child(item)
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://Scenes/Assignments/AssignmentMenu.tscn")
+	get_tree().change_scene("res://Scenes/Worlds/WorldsScreen.tscn")
 
 func get_assignment_questions() -> void:
 	Firebase.get_document_or_collection("Assignment", http)

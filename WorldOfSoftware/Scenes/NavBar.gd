@@ -15,7 +15,7 @@ func _ready():
 
 func _on_Assignment2D_input_event(viewport, event, shape_idx):
 	if event.is_pressed():
-		get_tree().change_scene("res://Scenes//Worlds//LevelSelection.tscn")
+		get_tree().change_scene("res://Scenes//Assignments//StudentAttempt.tscn")
 
 
 func _on_ChallengeArea_input_event(viewport, event, shape_idx):
