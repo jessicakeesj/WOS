@@ -29,4 +29,5 @@ func _on_view_assignment_pressed():
 
 
 func _on_BackButton_pressed():
+	get_tree().change_scene("res://Scenes/SummaryReport/Summary.tscn")
 	pass # Replace with function body.
