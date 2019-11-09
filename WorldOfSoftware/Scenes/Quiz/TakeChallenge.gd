@@ -315,7 +315,7 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 					challenge_hist = json.result.fields['ChallengeHistory'].arrayValue.values
 					var timeLog = challenge_hist[challenge_hist.size()-1].mapValue.fields.attemptedDateTime.stringValue
 					if compareTime(timeLog):
-						get_tree().change_scene("res://Scenes//Worlds//LevelSelection.tscn")
+						get_tree().change_scene("res://Scenes/Quiz/ChallengeMenu.tscn")
 			else:
 				challenge_hist = []
 			current_email = json.result.fields['Email']
