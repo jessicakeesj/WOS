@@ -420,5 +420,5 @@ func _on_InputButton_pressed():
 	pass # Replace with function body.
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://Scenes/Worlds/WorldsScreen.tscn")
+	get_tree().change_scene("res://Scenes/Quiz/ChallengeMenu.tscn")
 	pass # Replace with function body.

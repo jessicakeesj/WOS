@@ -54,8 +54,9 @@ const ListItem=preload("res://Scenes/Quiz/GridRow.tscn") #edit from here
 
 func _ready():
 	Global.start_test("challenge question list (ChallangeListScene.tscn)")
-	init()
-	get_questions()
+	for i in range(0,ITERATIONS):
+		init()
+		get_questions()
 
 func init():
 	dialog = load("res://Assets//Quiz//World//dialog_button.png")
@@ -206,5 +207,5 @@ func _on_TwitButton_pressed():
 	pass # Replace with function body.
 
 func _on_BacKButton_pressed():
-	get_tree().change_scene("res://Scenes/Worlds/WorldsScreen.tscn")
+	get_tree().change_scene("res://Scenes/Quiz/ChallengeMenu.tscn")
 	pass # Replace with function body.

@@ -95,3 +95,6 @@ func filterScore(result):
 	for a in result:
 		displayItem(a)
 	
+func _on_BackButton_pressed():
+	get_tree().change_scene("res://Scenes//Quiz//ChallengeMenu.tscn")
+	pass # Replace with function body.

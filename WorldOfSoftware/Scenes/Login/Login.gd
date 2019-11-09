@@ -18,15 +18,21 @@ onready var domain2 : OptionButton = $VBoxContainer/Domain/LineEdit
 var domainText = ""
 var userID:= ""
 var isVerified := false
+# How many times test loops are ran. Higher is slower, but gives better average.
+const ITERATIONS = 1
 
 func _on_LoginButton_pressed() -> void:
 	# set domaintext
-	domainText = str(domain2.get_item_text(domain2.get_selected_id()))
-	if username.text.empty() or password.text.empty():
-		# empty username/pass
-		notification.text = "Enter Username or Password"
-		return
-	Firebase.login(username.text, password.text, http)
+	Global.start_test("login (Login.tscn)")
+	for i in range(0,ITERATIONS):
+		domainText = str(domain2.get_item_text(domain2.get_selected_id()))
+		if username.text.empty() or password.text.empty():
+			# empty username/pass
+			notification.text = "Enter Username or Password"
+			return
+		else:
+			notification.text = "Loading..."
+		Firebase.login(username.text, password.text, http)
 
 
 func _on_BackButton_pressed() -> void:
@@ -53,18 +59,18 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		#print(userID)
 
 func _on_HTTPRequest2_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void: 
-	print("HTTP2 Done")
-	print(Firebase.user_info.token)
+#	print("HTTP2 Done")
+#	print(Firebase.user_info.token)
 	Firebase.check_verify(Firebase.user_info.token, http5)
 
 # Buffer request
 func _on_HTTPRequest5_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void: 
-	print("HTTP5 Done")
+#	print("HTTP5 Done")
 	Firebase2.get_document_or_collection("Users", http3)
 
 # Check if verified email
 func _on_HTTPRequest3_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void: 
-	print("HTTP3 Done")
+#	print("HTTP3 Done")
 	if Firebase.isVerified:
 		Firebase.get_document("Users/%s" % Firebase.user_info.id,http4)
 	else:
@@ -72,14 +78,15 @@ func _on_HTTPRequest3_request_completed(result: int, response_code: int, headers
 
 # Check domain and redirect
 func _on_HTTPRequest4_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
-	print(Firebase.isVerified)
+#	print(Firebase.isVerified)
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
-	print("body is")
-	print(result_body.fields.Domain)
+#	print("body is")
+#	print(result_body.fields.Domain)
 	if "STUDENT" in domainText and "STUDENT" in str(result_body.fields.Domain):
 		notification.text = "Student Login sucessful!"
 		userID = Firebase.user_info.id
-		yield(get_tree().create_timer(2.0), "timeout")
+		yield(get_tree().create_timer(0.5), "timeout")
+		Global.stop_test(ITERATIONS)
 		#yield(http,"request_completed")
 		Global.set_user_id(userID)
 		Global.set_user_key(userID)
@@ -90,13 +97,13 @@ func _on_HTTPRequest4_request_completed(result: int, response_code: int, headers
 		notification.text = "Teacher Login sucessful!"
 		userID = Firebase.user_info.id
 		Global.set_user_id(userID)
-		yield(get_tree().create_timer(2.0), "timeout")
+		yield(get_tree().create_timer(0.5), "timeout")
 		#yield(http,"request_completed")
 		get_tree().change_scene("res://Scenes/SummaryReport/Summary.tscn")
 	else:
 		notification.text = "You chose the wrong domain."
-	print("User ID is")
-	print(userID)
+#	print("User ID is")
+#	print(userID)
 			
 func get_userid() -> String:
 	# call this to get user ID

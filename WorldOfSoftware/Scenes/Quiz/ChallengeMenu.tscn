@@ -31,11 +31,11 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="StreamTexture" id=7]
 flags = 4
-load_path = "res://.import/records.png-49285326b13e35753649300dd510383a.stex"
+load_path = "res://.import/arrow_wood_left.png-d26b75d347a358e75b7cfb7949c75afa.stex"
 
 [sub_resource type="StreamTexture" id=8]
 flags = 4
-load_path = "res://.import/arrow_wood_left.png-d26b75d347a358e75b7cfb7949c75afa.stex"
+load_path = "res://.import/prize.png-28c332a6423f0c523eef352a5edfb7ce.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -95,27 +95,22 @@ margin_bottom = 589.614
 custom_fonts/font = SubResource( 6 )
 text = "Compete!"
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 258.472
-margin_top = 707.396
-margin_right = 358.472
-margin_bottom = 807.396
-rect_min_size = Vector2( 100, 0 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 7 )
-expand = true
-
-[node name="Back" type="TextureButton" parent="."]
+[node name="BackButton" type="TextureButton" parent="."]
 margin_left = 15.0
 margin_top = 15.0
 margin_right = 95.0
 margin_bottom = 95.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+texture_normal = SubResource( 7 )
+expand = true
+
+[node name="RankButton" type="TextureButton" parent="."]
+margin_left = 258.899
+margin_top = 681.775
+margin_right = 358.899
+margin_bottom = 781.775
 texture_normal = SubResource( 8 )
 expand = true
 [connection signal="pressed" from="CreateButton" to="." method="_on_CreateButton_pressed"]
 [connection signal="pressed" from="TakeButton" to="." method="_on_TakeButton_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="RankButton" to="." method="_on_RankButton_pressed"]
