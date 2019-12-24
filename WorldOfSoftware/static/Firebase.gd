@@ -1,6 +1,4 @@
 extends Node
-# My Firebass API Key
-const API_KEY := "AIzaSyBvsNBz_HEsQDZVE1hLEhYeJ8ZeXpqnMuE"
 
 const REGISTER_URL := "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=%s" % API_KEY
 const LOGIN_URL := "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=%s" % API_KEY
